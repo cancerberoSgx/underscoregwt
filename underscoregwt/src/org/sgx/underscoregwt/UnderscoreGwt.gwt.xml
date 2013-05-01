@@ -4,5 +4,5 @@
 	<inherits name="com.google.gwt.user.User" />
 	<inherits name="org.sgx.jsutil.JsUtil" />
 	<source path="client" />
-	<entry-point class="org.sgx.underscoregwt.client.UnderscoreGwt"></entry-point>
+	<entry-point class="org.sgx.underscoregwt.client.UnderscoreGwt"></entry-point> 
 </module>
