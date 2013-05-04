@@ -60,6 +60,13 @@ public class UnderscoreGwtTest implements EntryPoint {
 		result2=_.union(JsArray.create(1, 2, 3), JsArray.create(101, 2, 1, 10), JsArray.create(2, 1));
 		test.assertTrue(result2.length()==5&&result2.getInt(0)==1&&result2.getInt(1)==2, "testArrays4");
 		test.assertTrue(_.isEqual(result2, JsArray.create(1,2,3,101,10)),"testArrays5"); 
+		
+		test.assertTrue(_.indexOf(JsArray.create(1.1, 2.2, 3.3), 2.2)==1, "testArrays_indexOf1");
+		test.assertTrue(_.lastIndexOf(JsArray.create(1.1, 2.2, 3.3, 2.2), 2.2)==3, "testArrays_lastIndexOf1");
+		
+		
+		_.map(JsArray.create(1, 2, 3), new NN)
+//		_.each(_.range(10)
 	}
 
 	private void test1(TestUtil test) {

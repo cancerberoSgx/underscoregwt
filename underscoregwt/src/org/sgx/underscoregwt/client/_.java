@@ -1,5 +1,7 @@
 package org.sgx.underscoregwt.client;
 
+import java.util.Collection;
+
 import org.sgx.jsutil.client.JSValue;
 import org.sgx.jsutil.client.JsArray;
 
@@ -1190,9 +1192,646 @@ public class _ {
 	
 	
 	
+	//zip
+	
+	/**
+	 * Merges together the values of each of the arrays with the values at the corresponding position. Useful when you have separate data sources that are coordinated through matching array indexes. If you're working with a matrix of nested arrays, zip.apply can transpose the matrix in a similar fashion.
+	 * Example: 
+	 * <pre>
+	 * _.zip(['moe', 'larry', 'curly'], [30, 40, 50], [true, false, false]);
+=> [["moe", 30, true], ["larry", 40, false], ["curly", 50, false]]
+	 * </pre>
+	 *  
+	 * @param array
+	 * @param isSorted
+	 * @param iterator
+	 * @return
+	 */
+	public static final native JsArray zip(JavaScriptObject arrays)/*-{
+		return $wnd._.zip(arrays); 
+	}-*/;
+	
+	/**
+	 * Merges together the values of each of the arrays with the values at the corresponding position. Useful when you have separate data sources that are coordinated through matching array indexes. If you're working with a matrix of nested arrays, zip.apply can transpose the matrix in a similar fashion. 
+	 * @param array
+	 * @param isSorted
+	 * @param iterator
+	 * @return
+	 */
+	public static final native JsArray zip(JavaScriptObject ... arrays)/*-{
+		return $wnd._.zip(@org.sgx.jsutil.client.JsUtil::toJsArray([Lcom/google/gwt/core/client/JavaScriptObject;)(arrays)); 
+	}-*/;
+	
+//	/**
+//	 * Merges together the values of each of the arrays with the values at the corresponding position. Useful when you have separate data sources that are coordinated through matching array indexes. If you're working with a matrix of nested arrays, zip.apply can transpose the matrix in a similar fashion. 
+//	 * @param array
+//	 * @param isSorted
+//	 * @param iterator
+//	 * @return
+//	 */
+//	public static final native JsArray zip(Collection<JavaScriptObject> arrays)/*-{
+//		return $wnd._.zip(@org.sgx.jsutil.client.JsUtil::toJsArray(Ljava/util/Collection;)(arrays)); 
+//	}-*/;
+	
+	/**
+	 * Converts arrays into objects. Pass either a single list of [key, value] pairs, or a list of keys, and a list of values.
+
+<pre>_.object(['moe', 'larry', 'curly'], [30, 40, 50]);
+=> {moe: 30, larry: 40, curly: 50}
+
+_.object([['moe', 30], ['larry', 40], ['curly', 50]]);
+=> {moe: 30, larry: 40, curly: 50}</pre>
+
+	 * @param list
+	 * @return
+	 */
+	public static final native JavaScriptObject object(JavaScriptObject list)/*-{
+		return $wnd._.object(list); 
+	}-*/;
+	
+	/**
+	 * Converts arrays into objects. Pass either a single list of [key, value] pairs, or a list of keys, and a list of values.
+
+<pre>_.object(['moe', 'larry', 'curly'], [30, 40, 50]);
+=> {moe: 30, larry: 40, curly: 50}
+
+_.object([['moe', 30], ['larry', 40], ['curly', 50]]);
+=> {moe: 30, larry: 40, curly: 50}</pre>
+
+	 * @param list
+	 * @return
+	 */
+	public static final native JavaScriptObject object(JavaScriptObject list, JavaScriptObject values)/*-{
+		return $wnd._.object(list, values); 
+	}-*/;
+	
+	/**
+	 * Returns the index at which value can be found in the array, or -1 if value is not present in the array. Uses the native indexOf function unless it's missing. If you're working with a large array, and you know that the array is already sorted, pass true for isSorted to use a faster binary search ... or, pass a number as the third argument in order to look for the first matching value in the array after the given index. . Example: 
+	 * <pre>_.indexOf([1, 2, 3], 2);
+=> 1</pre>
+	 * @param array
+	 * @param values
+	 * @return
+	 */
+	public static final native int indexOf(JavaScriptObject array, JavaScriptObject values)/*-{
+		return $wnd._.indexOf(array, values); 
+	}-*/;
+	/**
+	 * Returns the index at which value can be found in the array, or -1 if value is not present in the array. Uses the native indexOf function unless it's missing. If you're working with a large array, and you know that the array is already sorted, pass true for isSorted to use a faster binary search ... or, pass a number as the third argument in order to look for the first matching value in the array after the given index. . Example: 
+	 * <pre>_.indexOf([1, 2, 3], 2);
+=> 1</pre>
+	 * @param array
+	 * @param values
+	 * @return
+	 */
+	public static final native int indexOf(JavaScriptObject array, JavaScriptObject values, boolean isSorted)/*-{
+		return $wnd._.indexOf(array, values, isSorted); 
+	}-*/;
+	
+	/**
+	 * Returns the index at which value can be found in the array, or -1 if value is not present in the array. Uses the native indexOf function unless it's missing. If you're working with a large array, and you know that the array is already sorted, pass true for isSorted to use a faster binary search ... or, pass a number as the third argument in order to look for the first matching value in the array after the given index. . Example: 
+	 * <pre>_.indexOf([1, 2, 3], 2);
+=> 1</pre>
+	 * @param array
+	 * @param values
+	 * @return
+	 */
+	public static final native int indexOf(JavaScriptObject array, double values)/*-{
+		return $wnd._.indexOf(array, values); 
+	}-*/;
+	/**
+	 * Returns the index at which value can be found in the array, or -1 if value is not present in the array. Uses the native indexOf function unless it's missing. If you're working with a large array, and you know that the array is already sorted, pass true for isSorted to use a faster binary search ... or, pass a number as the third argument in order to look for the first matching value in the array after the given index. . Example: 
+	 * <pre>_.indexOf([1, 2, 3], 2);
+=> 1</pre>
+	 * @param array
+	 * @param values
+	 * @return
+	 */
+	public static final native int indexOf(JavaScriptObject array, double values, boolean isSorted)/*-{
+		return $wnd._.indexOf(array, values, isSorted); 
+	}-*/;
+	/**
+	 * Returns the index at which value can be found in the array, or -1 if value is not present in the array. Uses the native indexOf function unless it's missing. If you're working with a large array, and you know that the array is already sorted, pass true for isSorted to use a faster binary search ... or, pass a number as the third argument in order to look for the first matching value in the array after the given index. . Example: 
+	 * <pre>_.indexOf([1, 2, 3], 2);
+=> 1</pre>
+	 * @param array
+	 * @param values
+	 * @return
+	 */
+	public static final native int indexOf(JavaScriptObject array, int values)/*-{
+		return $wnd._.indexOf(array, values); 
+	}-*/;
+	/**
+	 * Returns the index at which value can be found in the array, or -1 if value is not present in the array. Uses the native indexOf function unless it's missing. If you're working with a large array, and you know that the array is already sorted, pass true for isSorted to use a faster binary search ... or, pass a number as the third argument in order to look for the first matching value in the array after the given index. . Example: 
+	 * <pre>_.indexOf([1, 2, 3], 2);
+=> 1</pre>
+	 * @param array
+	 * @param values
+	 * @return
+	 */
+	public static final native int indexOf(JavaScriptObject array, int values, boolean isSorted)/*-{
+		return $wnd._.indexOf(array, values, isSorted); 
+	}-*/;
+	/**
+	 * Returns the index at which value can be found in the array, or -1 if value is not present in the array. Uses the native indexOf function unless it's missing. If you're working with a large array, and you know that the array is already sorted, pass true for isSorted to use a faster binary search ... or, pass a number as the third argument in order to look for the first matching value in the array after the given index. . Example: 
+	 * <pre>_.indexOf([1, 2, 3], 2);
+=> 1</pre>
+	 * @param array
+	 * @param values
+	 * @return
+	 */
+	public static final native int indexOf(JavaScriptObject array, String values)/*-{
+		return $wnd._.indexOf(array, values); 
+	}-*/;
+	/**
+	 * Returns the index at which value can be found in the array, or -1 if value is not present in the array. Uses the native indexOf function unless it's missing. If you're working with a large array, and you know that the array is already sorted, pass true for isSorted to use a faster binary search ... or, pass a number as the third argument in order to look for the first matching value in the array after the given index. . Example: 
+	 * <pre>_.indexOf([1, 2, 3], 2);
+=> 1</pre>
+	 * @param array
+	 * @param values
+	 * @return
+	 */
+	public static final native int indexOf(JavaScriptObject array, String values, boolean isSorted)/*-{
+		return $wnd._.indexOf(array, values, isSorted); 
+	}-*/;
+	
+	/**
+	 * Returns the index at which value can be found in the array, or -1 if value is not present in the array. Uses the native indexOf function unless it's missing. If you're working with a large array, and you know that the array is already sorted, pass true for isSorted to use a faster binary search ... or, pass a number as the third argument in order to look for the first matching value in the array after the given index. . Example: 
+	 * <pre>_.indexOf([1, 2, 3], 2);
+=> 1</pre>
+	 * @param array
+	 * @param values
+	 * @return
+	 */
+	public static final native int indexOf(JavaScriptObject array, boolean values)/*-{
+		return $wnd._.indexOf(array, values); 
+	}-*/;
+	/**
+	 * Returns the index at which value can be found in the array, or -1 if value is not present in the array. Uses the native indexOf function unless it's missing. If you're working with a large array, and you know that the array is already sorted, pass true for isSorted to use a faster binary search ... or, pass a number as the third argument in order to look for the first matching value in the array after the given index. . Example: 
+	 * <pre>_.indexOf([1, 2, 3], 2);
+=> 1</pre>
+	 * @param array
+	 * @param values
+	 * @return
+	 */
+	public static final native int indexOf(JavaScriptObject array, boolean values, boolean isSorted)/*-{
+		return $wnd._.indexOf(array, values, isSorted); 
+	}-*/;
+	
+	
+	//lastIndexOf
+	
+	/**
+	 * * Returns the index of the last occurrence of value in the array, or -1 if value is not present. Uses the native lastIndexOf function if possible. Pass fromIndex to start your search at a given index. Example: <pre>_.lastIndexOf([1, 2, 3, 1, 2, 3], 2);
+=> 4</pre>
+	 * @param array
+	 * @param values
+	 * @return
+	 */
+	public static final native int lastIndexOf(JavaScriptObject array, JavaScriptObject values)/*-{
+		return $wnd._.lastIndexOf(array, values); 
+	}-*/;
+	/**
+	 * * Returns the index of the last occurrence of value in the array, or -1 if value is not present. Uses the native lastIndexOf function if possible. Pass fromIndex to start your search at a given index. Example: <pre>_.lastIndexOf([1, 2, 3, 1, 2, 3], 2);
+=> 4</pre>
+	 * @return
+	 */
+	public static final native int lastIndexOf(JavaScriptObject array, JavaScriptObject values, int fromIndex)/*-{
+		return $wnd._.lastIndexOf(array, values, fromIndex); 
+	}-*/;
+	
+	/**
+	 * * Returns the index of the last occurrence of value in the array, or -1 if value is not present. Uses the native lastIndexOf function if possible. Pass fromIndex to start your search at a given index. Example: <pre>_.lastIndexOf([1, 2, 3, 1, 2, 3], 2);
+=> 4</pre>
+	 * @return
+	 */
+	public static final native int lastIndexOf(JavaScriptObject array, double values)/*-{
+		return $wnd._.lastIndexOf(array, values); 
+	}-*/;
+	/**
+	 * * Returns the index of the last occurrence of value in the array, or -1 if value is not present. Uses the native lastIndexOf function if possible. Pass fromIndex to start your search at a given index. Example: <pre>_.lastIndexOf([1, 2, 3, 1, 2, 3], 2);
+=> 4</pre>
+	 * @return
+	 */
+	public static final native int lastIndexOf(JavaScriptObject array, double values, int fromIndex)/*-{
+		return $wnd._.lastIndexOf(array, values, fromIndex); 
+	}-*/;
+	/**
+	 * * Returns the index of the last occurrence of value in the array, or -1 if value is not present. Uses the native lastIndexOf function if possible. Pass fromIndex to start your search at a given index. Example: <pre>_.lastIndexOf([1, 2, 3, 1, 2, 3], 2);
+=> 4</pre>
+	 * @param array
+	 * @param values
+	 * @return
+	 */
+	public static final native int lastIndexOf(JavaScriptObject array, int values)/*-{
+		return $wnd._.lastIndexOf(array, values); 
+	}-*/;
+	/**
+	 * * Returns the index of the last occurrence of value in the array, or -1 if value is not present. Uses the native lastIndexOf function if possible. Pass fromIndex to start your search at a given index. Example: <pre>_.lastIndexOf([1, 2, 3, 1, 2, 3], 2);
+=> 4</pre>
+	 * @param array
+	 * @param values
+	 * @return
+	 */
+	public static final native int lastIndexOf(JavaScriptObject array, int values, int fromIndex)/*-{
+		return $wnd._.lastIndexOf(array, values, fromIndex); 
+	}-*/;
+	/**
+	 * * Returns the index of the last occurrence of value in the array, or -1 if value is not present. Uses the native lastIndexOf function if possible. Pass fromIndex to start your search at a given index. Example: <pre>_.lastIndexOf([1, 2, 3, 1, 2, 3], 2);
+=> 4</pre>
+	 * @param array
+	 * @param values
+	 * @return
+	 */
+	public static final native int lastIndexOf(JavaScriptObject array, String values)/*-{
+		return $wnd._.lastIndexOf(array, values); 
+	}-*/;
+	/**
+	 * * Returns the index of the last occurrence of value in the array, or -1 if value is not present. Uses the native lastIndexOf function if possible. Pass fromIndex to start your search at a given index. Example: <pre>_.lastIndexOf([1, 2, 3, 1, 2, 3], 2);
+=> 4</pre>
+	 * @param array
+	 * @param values
+	 * @return
+	 */
+	public static final native int lastIndexOf(JavaScriptObject array, String values, int fromIndex)/*-{
+		return $wnd._.lastIndexOf(array, values, fromIndex); 
+	}-*/;
+	
+	/**
+	 * * Returns the index of the last occurrence of value in the array, or -1 if value is not present. Uses the native lastIndexOf function if possible. Pass fromIndex to start your search at a given index. Example: <pre>_.lastIndexOf([1, 2, 3, 1, 2, 3], 2);
+=> 4</pre>
+	 * @param array
+	 * @param values
+	 * @return
+	 */
+	public static final native int lastIndexOf(JavaScriptObject array, boolean values)/*-{
+		return $wnd._.lastIndexOf(array, values); 
+	}-*/;
+	/**
+	 * * Returns the index of the last occurrence of value in the array, or -1 if value is not present. Uses the native lastIndexOf function if possible. Pass fromIndex to start your search at a given index. Example: <pre>_.lastIndexOf([1, 2, 3, 1, 2, 3], 2);
+=> 4</pre>
+	 * @param array
+	 * @param values
+	 * @return
+	 */
+	public static final native int lastIndexOf(JavaScriptObject array, boolean values, int fromIndex)/*-{
+		return $wnd._.lastIndexOf(array, values, fromIndex); 
+	}-*/;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	//sortedIndex
+	
+	
+	/**
+	 * Uses a binary search to determine the index at which the value should be inserted into the list in order to maintain the list's sorted order. If an iterator is passed, it will be used to compute the sort ranking of each value, including the value you pass. . Example: 
+	 * <pre>_.sortedIndex([10, 20, 30, 40, 50], 35);
+=> 3</pre>
+	 * @param array
+	 * @param values
+	 * @param fromIndex
+	 * @return
+	 */
+	public static final native int sortedIndex(JavaScriptObject list, boolean value)/*-{
+		return $wnd._.sortedIndex(list, value); 
+	}-*/;
+	/**
+	 * Uses a binary search to determine the index at which the value should be inserted into the list in order to maintain the list's sorted order. If an iterator is passed, it will be used to compute the sort ranking of each value, including the value you pass. . Example: 
+	 * <pre>_.sortedIndex([10, 20, 30, 40, 50], 35);
+=> 3</pre>
+	 * @param array
+	 * @param values
+	 * @param fromIndex
+	 * @return
+	 */
+	public static final native int sortedIndex(JavaScriptObject list, boolean value, JavaScriptObject iterator)/*-{
+		return $wnd._.sortedIndex(list, value, iterator); 
+	}-*/;
+	/**
+	 * Uses a binary search to determine the index at which the value should be inserted into the list in order to maintain the list's sorted order. If an iterator is passed, it will be used to compute the sort ranking of each value, including the value you pass. . Example: 
+	 * <pre>_.sortedIndex([10, 20, 30, 40, 50], 35);
+=> 3</pre>
+	 * @param array
+	 * @param values
+	 * @param fromIndex
+	 * @return
+	 */
+	public static final native int sortedIndex(JavaScriptObject list, boolean value, JavaScriptObject iterator, JavaScriptObject context)/*-{
+		return $wnd._.sortedIndex(list, value, iterator, context); 
+	}-*/;
+	
+	/**
+	 * Uses a binary search to determine the index at which the value should be inserted into the list in order to maintain the list's sorted order. If an iterator is passed, it will be used to compute the sort ranking of each value, including the value you pass. . Example: 
+	 * <pre>_.sortedIndex([10, 20, 30, 40, 50], 35);
+=> 3</pre>
+	 * @param array
+	 * @param values
+	 * @param fromIndex
+	 * @return
+	 */
+	public static final native int sortedIndex(JavaScriptObject list, String value)/*-{
+		return $wnd._.sortedIndex(list, value); 
+	}-*/;
+	/**
+	 * Uses a binary search to determine the index at which the value should be inserted into the list in order to maintain the list's sorted order. If an iterator is passed, it will be used to compute the sort ranking of each value, including the value you pass. . Example: 
+	 * <pre>_.sortedIndex([10, 20, 30, 40, 50], 35);
+=> 3</pre>
+	 * @param array
+	 * @param values
+	 * @param fromIndex
+	 * @return
+	 */
+	public static final native int sortedIndex(JavaScriptObject list, String value, JavaScriptObject iterator)/*-{
+		return $wnd._.sortedIndex(list, value, iterator); 
+	}-*/;
+	/**
+	 * Uses a binary search to determine the index at which the value should be inserted into the list in order to maintain the list's sorted order. If an iterator is passed, it will be used to compute the sort ranking of each value, including the value you pass. . Example: 
+	 * <pre>_.sortedIndex([10, 20, 30, 40, 50], 35);
+=> 3</pre>
+	 * @param array
+	 * @param values
+	 * @param fromIndex
+	 * @return
+	 */
+	public static final native int sortedIndex(JavaScriptObject list, String value, JavaScriptObject iterator, JavaScriptObject context)/*-{
+		return $wnd._.sortedIndex(list, value, iterator, context); 
+	}-*/;
+	
+	/**
+	 * Uses a binary search to determine the index at which the value should be inserted into the list in order to maintain the list's sorted order. If an iterator is passed, it will be used to compute the sort ranking of each value, including the value you pass. . Example: 
+	 * <pre>_.sortedIndex([10, 20, 30, 40, 50], 35);
+=> 3</pre>
+	 * @param array
+	 * @param values
+	 * @param fromIndex
+	 * @return
+	 */
+	public static final native int sortedIndex(JavaScriptObject list, double value)/*-{
+		return $wnd._.sortedIndex(list, value); 
+	}-*/;
+	/**
+	 * Uses a binary search to determine the index at which the value should be inserted into the list in order to maintain the list's sorted order. If an iterator is passed, it will be used to compute the sort ranking of each value, including the value you pass. . Example: 
+	 * <pre>_.sortedIndex([10, 20, 30, 40, 50], 35);
+=> 3</pre>
+	 * @param array
+	 * @param values
+	 * @param fromIndex
+	 * @return
+	 */
+	public static final native int sortedIndex(JavaScriptObject list, double value, JavaScriptObject iterator)/*-{
+		return $wnd._.sortedIndex(list, value, iterator); 
+	}-*/;
+	/**
+	 * Uses a binary search to determine the index at which the value should be inserted into the list in order to maintain the list's sorted order. If an iterator is passed, it will be used to compute the sort ranking of each value, including the value you pass. . Example: 
+	 * <pre>_.sortedIndex([10, 20, 30, 40, 50], 35);
+=> 3</pre>
+	 * @param array
+	 * @param values
+	 * @param fromIndex
+	 * @return
+	 */
+	public static final native int sortedIndex(JavaScriptObject list, double value, JavaScriptObject iterator, JavaScriptObject context)/*-{
+		return $wnd._.sortedIndex(list, value, iterator, context); 
+	}-*/;
+	
+	
+	/**
+	 * Uses a binary search to determine the index at which the value should be inserted into the list in order to maintain the list's sorted order. If an iterator is passed, it will be used to compute the sort ranking of each value, including the value you pass. . Example: 
+	 * <pre>_.sortedIndex([10, 20, 30, 40, 50], 35);
+=> 3</pre>
+	 * @param array
+	 * @param values
+	 * @param fromIndex
+	 * @return
+	 */
+	public static final native int sortedIndex(JavaScriptObject list, JavaScriptObject value)/*-{
+		return $wnd._.sortedIndex(list, value); 
+	}-*/;
+	/**
+	 * Uses a binary search to determine the index at which the value should be inserted into the list in order to maintain the list's sorted order. If an iterator is passed, it will be used to compute the sort ranking of each value, including the value you pass. . Example: 
+	 * <pre>_.sortedIndex([10, 20, 30, 40, 50], 35);
+=> 3</pre>
+	 * @param array
+	 * @param values
+	 * @param fromIndex
+	 * @return
+	 */
+	public static final native int sortedIndex(JavaScriptObject list, JavaScriptObject value, JavaScriptObject iterator)/*-{
+		return $wnd._.sortedIndex(list, value, iterator); 
+	}-*/;
+	/**
+	 * Uses a binary search to determine the index at which the value should be inserted into the list in order to maintain the list's sorted order. If an iterator is passed, it will be used to compute the sort ranking of each value, including the value you pass. . Example: 
+	 * <pre>_.sortedIndex([10, 20, 30, 40, 50], 35);
+=> 3</pre>
+	 * @param array
+	 * @param values
+	 * @param fromIndex
+	 * @return
+	 */
+	public static final native int sortedIndex(JavaScriptObject list, JavaScriptObject value, JavaScriptObject iterator, JavaScriptObject context)/*-{
+		return $wnd._.sortedIndex(list, value, iterator, context); 
+	}-*/;
+	
+	
+	
+	
+	
+	
+	
+	
+	//range
+	
+	
+	/**
+	 * A function to create flexibly-numbered lists of integers, handy for each and map loops. start, if omitted, defaults to 0; step defaults to 1. Returns a list of integers from start to stop, incremented (or decremented) by step, exclusive.  Example: 
+	 * <pre>
+_.range(10);
+=> [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+_.range(1, 11);
+=> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+_.range(0, 30, 5);
+=> [0, 5, 10, 15, 20, 25]
+_.range(0, -10, -1);
+=> [0, -1, -2, -3, -4, -5, -6, -7, -8, -9]
+_.range(0);
+=> []
+	 * </pre>
+	 * @param stop
+	 * @return
+	 */
+	public static final native JsArray range(int stop)/*-{
+		return $wnd._.range(stop); 
+	}-*/;
+
+	/**
+	 * A function to create flexibly-numbered lists of integers, handy for each and map loops. start, if omitted, defaults to 0; step defaults to 1. Returns a list of integers from start to stop, incremented (or decremented) by step, exclusive.  Example: 
+	 * <pre>
+_.range(10);
+=> [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+_.range(1, 11);
+=> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+_.range(0, 30, 5);
+=> [0, 5, 10, 15, 20, 25]
+_.range(0, -10, -1);
+=> [0, -1, -2, -3, -4, -5, -6, -7, -8, -9]
+_.range(0);
+=> []
+	 * </pre>
+	 * @param stop
+	 * @return
+	 */
+	public static final native JsArray range(int start, int stop)/*-{
+		return $wnd._.range(start, stop); 
+	}-*/;
+	
+	/**
+	 * A function to create flexibly-numbered lists of integers, handy for each and map loops. start, if omitted, defaults to 0; step defaults to 1. Returns a list of integers from start to stop, incremented (or decremented) by step, exclusive.  Example: 
+	 * <pre>
+_.range(10);
+=> [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+_.range(1, 11);
+=> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+_.range(0, 30, 5);
+=> [0, 5, 10, 15, 20, 25]
+_.range(0, -10, -1);
+=> [0, -1, -2, -3, -4, -5, -6, -7, -8, -9]
+_.range(0);
+=> []
+	 * </pre>
+	 * @param stop
+	 * @return
+	 */
+	public static final native JsArray range(int start, int stop, int step)/*-{
+		return $wnd._.range(start, stop, step); 
+	}-*/;
 	
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	//Collections	
+	
+	
+	//each / forEach
+	
+	/**
+	 * Iterates over a list of elements, yielding each in turn to an iterator function. The iterator is bound to the context object, if one is passed. Each invocation of iterator is called with three arguments: (element, index, list). If list is a JavaScript object, iterator's arguments will be (value, key, list). Delegates to the native forEach function if it exists. 
+	 * <pre>
+	 * _.each([1, 2, 3], alert);
+=> alerts each number in turn...
+_.each({one : 1, two : 2, three : 3}, alert);
+=> alerts each number value in turn...
+	 * </pre>
+	 * @return
+	 */
+	public static final native void each(JavaScriptObject list, JavaScriptObject iterator)/*-{
+		$wnd._.each(list, iterator); 
+	}-*/;
+	/**
+	 * Iterates over a list of elements, yielding each in turn to an iterator function. The iterator is bound to the context object, if one is passed. Each invocation of iterator is called with three arguments: (element, index, list). If list is a JavaScript object, iterator's arguments will be (value, key, list). Delegates to the native forEach function if it exists. 
+	 * <pre>
+	 * _.each([1, 2, 3], alert);
+=> alerts each number in turn...
+_.each({one : 1, two : 2, three : 3}, alert);
+=> alerts each number value in turn...
+	 * </pre>
+	 * @return
+	 */
+	public static final native void each(JavaScriptObject list, JavaScriptObject iterator, JavaScriptObject context)/*-{
+		$wnd._.each(list, iterator, context); 
+	}-*/;
+	
+	//Collections	
+	/**
+	 * Iterates over a list of elements, yielding each in turn to an iterator function. The iterator is bound to the context object, if one is passed. Each invocation of iterator is called with three arguments: (element, index, list). If list is a JavaScript object, iterator's arguments will be (value, key, list). Delegates to the native forEach function if it exists. 
+	 * <pre>
+	 * _.each([1, 2, 3], alert);
+=> alerts each number in turn...
+_.each({one : 1, two : 2, three : 3}, alert);
+=> alerts each number value in turn...
+	 * </pre>
+	 * @return
+	 */
+	public static final native void forEach(JavaScriptObject list, JavaScriptObject iterator)/*-{
+		$wnd._.forEach(list, iterator); 
+	}-*/;
+	/**
+	 * Iterates over a list of elements, yielding each in turn to an iterator function. The iterator is bound to the context object, if one is passed. Each invocation of iterator is called with three arguments: (element, index, list). If list is a JavaScript object, iterator's arguments will be (value, key, list). Delegates to the native forEach function if it exists. 
+	 * <pre>
+	 * _.each([1, 2, 3], alert);
+=> alerts each number in turn...
+_.each({one : 1, two : 2, three : 3}, alert);
+=> alerts each number value in turn...
+	 * </pre>
+	 * @return
+	 */
+	public static final native void forEach(JavaScriptObject list, JavaScriptObject iterator, JavaScriptObject context)/*-{
+		$wnd._.forEach(list, iterator, context); 
+	}-*/;
+	
+	
+	
+	//map
+	
+	/**
+	 * Produces a new array of values by mapping each value in list through a transformation function (iterator). If the native map method exists, it will be used instead. If list is a JavaScript object, iterator's arguments will be (value, key, list). Example: 
+	 * <pre>
+_.map([1, 2, 3], function(num){ return num * 3; });
+=> [3, 6, 9]
+_.map({one : 1, two : 2, three : 3}, function(num, key){ return num * 3; });
+=> [3, 6, 9]
+	 * </pre> 
+	 * @param list
+	 * @param iterator
+	 * @return
+	 */
+	public static final native JsArray map(JavaScriptObject list, JavaScriptObject iterator)/*-{
+		return $wnd._.map(list, iterator); 
+	}-*/;
+	
+	/**
+	 * Produces a new array of values by mapping each value in list through a transformation function (iterator). If the native map method exists, it will be used instead. If list is a JavaScript object, iterator's arguments will be (value, key, list). Example: 
+	 * <pre>
+_.map([1, 2, 3], function(num){ return num * 3; });
+=> [3, 6, 9]
+_.map({one : 1, two : 2, three : 3}, function(num, key){ return num * 3; });
+=> [3, 6, 9]
+	 * </pre> 
+	 * @param list
+	 * @param iterator
+	 * @return
+	 */
+	public static final native JsArray map(JavaScriptObject list, JavaScriptObject iterator, JavaScriptObject context)/*-{
+		return $wnd._.map(list, iterator, context); 
+	}-*/;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	// Objects
+	
 	/**
 	 * Performs an optimized deep comparison between the two objects, to determine if they should be considered equal.
 	 * 
