@@ -65,7 +65,7 @@ public class UnderscoreGwtTest implements EntryPoint {
 		test.assertTrue(_.lastIndexOf(JsArray.create(1.1, 2.2, 3.3, 2.2), 2.2)==3, "testArrays_lastIndexOf1");
 		
 		
-		_.map(JsArray.create(1, 2, 3), new NN)
+//		_.map(JsArray.create(1, 2, 3), new NN)
 //		_.each(_.range(10)
 	}
 
